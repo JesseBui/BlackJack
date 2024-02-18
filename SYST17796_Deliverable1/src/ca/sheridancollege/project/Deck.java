@@ -22,23 +22,27 @@ public class Deck {
     // The group of cards, stored in an ArrayList
     private ArrayList<Card> cards;
 
+    // Constructor to create a new deck of cards.
     public Deck() {
-        this.cards = new ArrayList<Card>();
+        this.cards = new ArrayList<Card>(); // Initialize the deck as an empty ArrayList
         String[] suits = { "Spades", "Hearts", "Diamonds", "Clubs" };
         String[] values = { "Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King" };
 
+        // Create cards for each suit and value combination
         for (String suit : suits) {
             for (String value : values) {
-                this.cards.add(new Card(suit, value));
+                this.cards.add(new Card(suit, value)); // Add a new Card object to the deck
             }
         }
     }
 
+    // Method to draw a card from the deck.
     public Card drawCard() {
         return this.cards.remove(this.cards.size() - 1);
     }
 
+    // Method to shuffle the deck.
     public void shuffle() {
-        Collections.shuffle(cards);
+        Collections.shuffle(cards); // Shuffle the cards using the Collections.shuffle() method
     }
 }// end class
