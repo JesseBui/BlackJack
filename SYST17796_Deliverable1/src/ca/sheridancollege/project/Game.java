@@ -40,6 +40,10 @@ public class Game {
         return this.player;
     }
 
+    public String getName() {
+        return this.name;
+    }
+
     public void startNewRound(){
         player.resetHand();
         dealer.resetHand();

@@ -1,4 +1,5 @@
 package ca.sheridancollege.project;
+import java.util.Scanner;
 /**
   * @author Khang Bui
  * @author Tin Nguyen
@@ -6,11 +7,14 @@ package ca.sheridancollege.project;
 public class BlackJack {
     public static void main(String[] args) {
         // Create a new game with 100 starting chips
-        Game game = new Game("Player 1", 100);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Do you mind telling us your name? ");
+        String name = scanner.nextLine(); 
+        Game game = new Game(name, 100);
 
         // Start a new round
         while (game.getPlayer().getChips()>0) {
-            System.out.println("Welcome to the BlackJack table!");
+            System.out.println("Welcome to the casino "+ name + " what would you like to do today? Oh "+ game.getName() + " of course! Let's start a new round!");
             game.startNewRound();
         
             // Display the player's hand and score
@@ -21,6 +25,6 @@ public class BlackJack {
 
             System.out.println("You now have " + game.getPlayer().getChips() + " chips.");
         }
-        System.out.println("You've run out of chips! Game over.");
+        System.out.println("You've run out of chips! Guess you ran out of luck today.");
     }
 }
