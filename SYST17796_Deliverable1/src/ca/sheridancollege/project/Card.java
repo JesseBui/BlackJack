@@ -14,22 +14,26 @@ package ca.sheridancollege.project;
  * @author Khang Bui
  */
 public class Card {
-    private String suit; 
-    private String value; 
-
+    private String suit; // The suit of the card.
+    private String value; // The value of the card.
+    
+    // Constructor to create a new Card object with a specified suit and value.
     public Card(String suit, String value) {
         this.suit = suit;
         this.value = value;
     }
 
+    // Getter method to retrieve the suit of the card.
     public String getSuit() {
         return suit;
     }
 
+    // Getter method to retrieve the value of the card.
     public String getValue() {
         return value;
     }
 
+    // Method to represent the Card object as a string.
     @Override
     public String toString() {
         return value + " of " + suit;
