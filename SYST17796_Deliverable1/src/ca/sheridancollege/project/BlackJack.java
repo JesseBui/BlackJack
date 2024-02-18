@@ -22,7 +22,7 @@ public class BlackJack {
     
             // Display the dealer's hand and score
             System.out.println(game.getDealer().toString());   
-
+            // Display player'status
             System.out.println("You now have " + game.getPlayer().getChips() + " chips.");
         }
         System.out.println("You've run out of chips! Guess you ran out of luck today.");
