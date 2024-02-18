@@ -12,7 +12,7 @@ public class BlackJack {
         while (game.getPlayer().getChips()>0) {
             System.out.println("Welcome to the BlackJack table!");
             game.startNewRound();
-        //Sanb
+        
             // Display the player's hand and score
             System.out.println(game.getPlayer().toString());
     
