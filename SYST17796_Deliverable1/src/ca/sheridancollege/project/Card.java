@@ -16,7 +16,7 @@ package ca.sheridancollege.project;
 public class Card {
     private String suit; // The suit of the card.
     private String value; // The value of the card.
-    
+
     // Constructor to create a new Card object with a specified suit and value.
     public Card(String suit, String value) {
         this.suit = suit;
@@ -39,4 +39,4 @@ public class Card {
         return value + " of " + suit;
     }
 
-}
+} // end class

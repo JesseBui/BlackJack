@@ -85,7 +85,11 @@ public class Game {
         while (dealer.getScore() < 17) {
             dealer.drawCard(deck.drawCard()); // Dealer hits until score is 17 or higher.
         }
-        if (player.getScore() > 21) {
+        if (dealer.getScore() > 21 && player.getScore() > 21) {
+            player.winChips(0);
+            System.out.println("It's a tie! You get to keep your chip.");
+        }
+        else if (player.getScore() > 21) {
             player.loseChips(betAmount); // Player busts.
             System.out.println( "You busted! You lose your bet of $" + betAmount);
 

@@ -24,7 +24,14 @@ public class BlackJack {
             System.out.println(game.getDealer().toString());   
             // Display player'status
             System.out.println("You now have " + game.getPlayer().getChips() + " chips.");
+            // Give player option to stop the game
+            System.out.println("Do you want to continue playing? (yes/no)");
+            String answer = scanner.nextLine();
+                
+            if (answer.equals("no")) {
+                break;
+            }
         }
         System.out.println("You've run out of chips! Guess you ran out of luck today.");
     }
-}
+} // end class
